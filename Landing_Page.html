@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+ <html background="images/hipcravo-DC5akQJyH4I-unsplash.jpg">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Welcome to Workout Timer</title>
+        <meta name="Timer Workout" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="static/style.css">
+
+
+    </head>
+
+    <body>
+        <h1>Hi and very welcome to this Workout timer App </h1><br>
+        
+
+        <h1> Can you tell me your name ? </h1>
+
+        <input type="text" id="tt" placeholder="...">
+        
+      
+        <button onclick="javascript:MyName()">Go Ahead, tell me</button>
+
+        <p id="demo"></p>
+        <p id="demo"></p>
+
+
+
+    <input type="button" value="Set the Timer" onclick="window.location.href='index.html'"/>
+
+    <script>
+        var d = new Date();
+        var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        document.getElementById("demo").innerHTML =  " Today is " + days[d.getDay()] + ", always a great day to move.";
+    </script>
+    </body>
+
+</html>
