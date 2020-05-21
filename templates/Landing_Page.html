@@ -9,7 +9,7 @@
         <title>Welcome to Workout Timer</title>
         <meta name="Timer Workout" content=""/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="static/style.css">
+        <link rel="stylesheet" media="all" href="{{ url_for('static', filename='main.css')}}">
 
 
     </head>
@@ -23,20 +23,23 @@
         <input type="text" id="tt" placeholder="...">
         
       
-        <button onclick="javascript:MyName()">Go Ahead, tell me</button>
+        <button onclick="MyName()">Go Ahead, tell me</button>
 
         <p id="demo"></p>
-        <p id="demo"></p>
+
+        <p id="nameit"></p>
 
 
 
-    <input type="button" value="Set the Timer" onclick="window.location.href='index.html'"/>
 
-    <script>
-        var d = new Date();
-        var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-        document.getElementById("demo").innerHTML =  " Today is " + days[d.getDay()] + ", always a great day to move.";
-    </script>
+
+<input type="button" value="Set the Timer" onclick="window.location.href='index.html'"/>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'TimerWorkout.js') }}"></script>
+
     </body>
+
+    <p class="footer">date()</p> <a target="blank"></a></p>
 
 </html>

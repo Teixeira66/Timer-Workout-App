@@ -1,19 +1,33 @@
-import flask
-import Timer
-app = flask.Flask("Timer Workout")
+from flask import Flask, render_template
+from datetime import datetime
 
-def get_html(page_name):
-    html_file = open(page_name + ".html")
-    content = html_file.read()
-    html_file.close()
-    return content
 
-@app.route("/")
-def Homepage():
-    return get_html("Landing_Page")
-    return ("timer")
+app = Flask("Timer Workout")
+
+
 
 @app.route("/")
 def Landing():
-    return get_html("index")
+    return render_template("Landing_Page.html")
+    
+def footer():
+    footerdb = open("footer.txt")
+    for i in range (3):
+        footerdb.write("footer.txt" + " by Carlos Teixeira")
+    footerdb.close()
+    return footer
 
+
+# basically i have to defined a route its not defined????
+
+@app.route("/index.html/")
+def Home():
+    return render_template("index.html")
+
+def date():
+    return ('Current Date and Time: {}'.format(datetime.datetime.now()))
+
+
+
+if "Timer Workout" == "__main__":
+    app.run()

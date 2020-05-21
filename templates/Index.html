@@ -6,7 +6,7 @@
 
   <meta charset="UTF-8">
   <title>Timer Workout</title>
-  <link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" media="all" href="{{ url_for('static', filename='main.css')}}">
       
 </head>
 
@@ -34,7 +34,7 @@
 
     <button id="reset" class="btn">RESET</button><br>
 
-    <button id="non-stop" class="btn">Non-Stop></button></br>
+   
 
     <div id="break">
       <p>Break Duration</p>
@@ -45,11 +45,21 @@
 
   </div>
 
-  <p class="footer">Coded by <a target="blank">Carlos Teixeira</a></p>
+
+
+<!--i could do the reading from a files here with for example diferente messages instead of code by-->
+ 
+
+
+  
+  <p class="footer">footer()</p> <a target="blank"></a></p>
+
+
+
 
 </div>
 
-    <script src="static/TimerWorkout.js"></script>
+    <script type="text/javascript"src="{{ url_for('static', filename='TimerWorkout.js') }}"></script>
 
 </body>
 </html>

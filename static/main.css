@@ -162,11 +162,11 @@ h1 {
 
   width: 80%;
 
-  display: grid;
+  
 
-  grid-template-columns: 2fr 1fr 2fr;
+  
 
-  align-items: center;
+  
 
 }
 
@@ -187,20 +187,6 @@ h1 {
 
 }
 
-
-#non-stop {
-
-  border-radius: 50px;
-
-  width: 80px;
-
-  height: 80px;
-
-  background: black;
-
-  transform: translate(0%, 50%);
-
-}
 
 
 #work, #break {
